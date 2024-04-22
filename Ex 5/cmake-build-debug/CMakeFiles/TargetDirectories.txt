@@ -1,0 +1,3 @@
+C:/Users/ASUS/Desktop/khalil/Horizon School of Digital Technologies/C programing/Queue/Lab/Ex 5/cmake-build-debug/CMakeFiles/Ex_5.dir
+C:/Users/ASUS/Desktop/khalil/Horizon School of Digital Technologies/C programing/Queue/Lab/Ex 5/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/Desktop/khalil/Horizon School of Digital Technologies/C programing/Queue/Lab/Ex 5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

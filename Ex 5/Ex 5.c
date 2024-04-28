@@ -24,11 +24,26 @@ void enqueue(city c ,queue *q)
         q->tail=e;
     }
 }
-void add(queue *q)
+void add_ms(queue *q)
 {
     city *e;
     e=(city *)malloc(sizeof(city));
-    strcpy(e->name,"msakin");
+    e->name="msakin";
+    printf("give the area of msseken");
+    scanf("%f",&e->area);
+    printf("give the number of inhabitants of msseken");
+    scanf("%d",&e->inh);
+    enqueue(*e,q);
+}
+void add(queue *q)
+{
+    city *e;
+    char *nam;
+    nam=(char *)malloc(sizeof(char));
+    e=(city *)malloc(sizeof(city));
+    printf("give the name of the city");
+    scanf("%s",nam);
+    e->name=nam;
     printf("give the area of the city");
     scanf("%f",&e->area);
     printf("give the number of inhabitants of the city");
@@ -53,28 +68,29 @@ void dequeue(queue *q)
         q->tail=NULL;
     }
 }
-city first(queue q)
+/*city first(queue q)
 {
-    return ((q.head)->value);
-}
-void display(queue q)
+    return ();
+}*/
+void display(queue *q)
 {
-    printf("%s / %f / %d\n",first(q).name,first(q).area,first(q).inh);
+    printf("%s / %f / %d\n",q->head->value.name,q->head->value.area,q->head->value.inh);
+    dequeue(q);
 }
-void delete_thr(queue *q)
+void delet_thr(queue *q)
 {
     int i;
     queue q1;
     create(&q1);
     for(i=0;i<2;i++)
     {
-        enqueue(first(*q),&q1);
+        enqueue(q->head->value,&q1);
         dequeue(q);
     }
     dequeue(q);
     for(i=0;i<2;i++)
     {
-        enqueue(first(q1),q);
+        enqueue(q1.head->value,q);
         dequeue(&q1);
     }
 }

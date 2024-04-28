@@ -8,7 +8,7 @@
 #include <stdlib.h>
 typedef struct
 {
-    char name[50];
+    char *name;
     float area;
     int inh;
 }city;
@@ -26,8 +26,10 @@ typedef struct
 unsigned isempty(queue);
 void enqueue(city ,queue *);
 void create(queue *);
+void add_ms(queue *);
 void add(queue *);
-city first(queue);
-void display(queue);
+/*city first(queue);*/
+void display(queue *);
+void dequeue(queue *);
 void delet_thr(queue *);
 #endif //EX_5_EX_5_H

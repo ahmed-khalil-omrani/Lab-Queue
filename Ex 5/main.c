@@ -1,14 +1,15 @@
 #include "Ex 5.h"
 int main() {
-    int i;
-    queue q;
+    int i,n;
+    queue q,q1;
     create(&q);
-    for(i=0;i<5;i++)
+    add_ms(&q);
+    printf("give the number of the citys");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
     {add(&q);}
-    for(i=0;i<5;i++)
-        display(q);
     delet_thr(&q);
-    printf("-----modify--------");
-    for(i=0;i<4;i++)
-        display(q);
+    printf("-----modify--------\n");
+    for(i=0;i<n;i++)
+        display(&q);
 }
